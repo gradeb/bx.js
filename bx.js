@@ -1,13 +1,17 @@
 /* bx.js | India | MIT */
 
-export const ready = (doc, fn) => {
-  doc.readyState !== "loading"
-    ? setTimeout(fn, 0)
-    : doc.addEventListener('DOMContentLoaded', fn);
+export const on = ( a, b, c ) => el.addEventListener( a, b );
+
+export const off = ( a, b, c ) => a.removeEventListener( b, c );
+
+export const ready = ( a, b ) => {
+  a.readyState !== "loading" ? setTimeout( b, 0 ) : on( a, 'DOMContentLoaded', b );
 };
 
-export const select = (sel, ctx = document) => ctx.querySelector(sel);
+export const select = ( a, b = document ) => b.querySelector( a );
 
-export const create = type => document.createElement(type);
+export const selectAll = ( a, b = document ) => b.querySelectorAll( a );
 
-export default { ready, select, create };
+export const create = a => document.createElement( a );
+
+export default { on, off, ready, select, selectAll, create };

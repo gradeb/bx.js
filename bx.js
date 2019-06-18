@@ -4,9 +4,7 @@ export const on = ( a, b, c ) => a.addEventListener( b, c );
 
 export const off = ( a, b, c ) => a.removeEventListener( b, c );
 
-export const ready = ( a, b ) => {
-  a.readyState !== "loading" ? setTimeout( b, 0 ) : on( a, 'DOMContentLoaded', b );
-};
+export const ready = ( a, b ) => a.readyState !== "loading" ? setTimeout( b, 0 ) : on( a, 'DOMContentLoaded', b );
 
 export const select = ( a, b = document ) => b.querySelector( a );
 

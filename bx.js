@@ -1,6 +1,6 @@
 /* bx.js | India | MIT */
 
-export const on = ( a, b, c ) => el.addEventListener( a, b );
+export const on = ( a, b, c ) => a.addEventListener( b, c );
 
 export const off = ( a, b, c ) => a.removeEventListener( b, c );
 

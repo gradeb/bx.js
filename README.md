@@ -18,13 +18,11 @@ import { ready, selector } from './path/to/bx.js';
 ## checking if dom state is ready
 
 ```javascript
-  
   ...
   
   const myfunc = () => { };
   
   bx.ready(document, myfunc);
-
 ```
 ## selecting an element
 
@@ -33,24 +31,20 @@ import { ready, selector } from './path/to/bx.js';
 ...
 
 // when no context element is passed
-
 const mylist = bx.select("ul#mylist"); // uses document as context
 
 // when a context element is passed
 
-const mylistitem = bx.select("li#mylistitem", mylist); // mydiv is the context element
-
+const mylistitem = bx.select("li#mylistitem", mylist); // mylist is the context element
 ```
 ## create an html element
 
 nothing special here, its just an wrapper arround document.createElement() function
 
 ```javascript
-
 ...
 
 const div = bx.create("div");
-
 ```
 
 ...many new functions will be added in future. but i will try to not blot this library with unneccessary functions.

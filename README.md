@@ -12,9 +12,7 @@ import bx from '.path/to/bx.js';
 // or only import the modules you need!
 
 import { ready, selector } from './path/to/bx.js';
-
 ```
-
 ## checking if dom state is ready
 
 ```javascript
@@ -50,22 +48,4 @@ nothing special here, its just an wrapper arround document.createElement() funct
 
 const div = bx.create("div");
 ```
-
-## event handling
-
-```javascript
-...
-const mybutton = bx.select(".mybutton");
-
-const myfunc = () => console.log("clicked!");
-
-// attach event listener
-
-bx.on(mybutton, "click", myfunc);
-
-// remove event listener
-
-bx.off(mybutton, "click", myfunc);
-```
-
 ...many new functions will be added in future. but i will try to not blot this library with unneccessary functions.

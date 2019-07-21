@@ -37,7 +37,7 @@ const mylistitem = bx.select("li#mylistitem", mylist); // mylist is the context 
 
 // select all matching elements
 
-const mylistitems = bx.select("li#mylistitem", mylist);
+const mylistitems = bx.selectAll("li", mylist);
 ```
 ## create an html element
 
